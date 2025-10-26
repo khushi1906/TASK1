@@ -1,0 +1,214 @@
+/*
+ * ATTRACTIVE CSS FOR LEVEL 1 LANDING PAGE (style.css)
+ * Updated to handle the hero image gracefully.
+ */
+
+/* --- Custom Variables & Global Resets --- */
+:root {
+    /* Modern, deep color palette */
+    --color-primary: #6f42c1;     /* Deep Purple */
+    --color-secondary: #17a2b8;   /* Vibrant Teal for accents */
+    --color-text: #343a40;        /* Dark Charcoal for readability */
+    --color-light: #f8f9fa;       /* Very light background */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-light); 
+    color: var(--color-text);
+}
+
+/* --- Layout Helper (Increased padding for breathing room) --- */
+.main-header, .hero-section, .features-section, .main-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px; 
+}
+
+/* --- Header Styling --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-size: 1.8em; 
+    font-weight: 700;
+    color: var(--color-primary); 
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 25px; 
+}
+
+.main-nav a:not(.cta-button) {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+.main-nav a:hover:not(.cta-button) {
+    color: var(--color-primary);
+}
+
+/* Call-to-Action (CTA) Button */
+.cta-button {
+    background-color: var(--color-primary);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.cta-button:hover {
+    background-color: #5a359c; 
+    transform: translateY(-2px); 
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    padding: 120px 30px; 
+    background: linear-gradient(135deg, #e0e9f6, #ffffff); 
+    margin-top: 0;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 60px;
+}
+
+.hero-content h1 {
+    font-size: 3em; 
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #6c757d;
+}
+
+/* Primary Button */
+.primary-button {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 15px 35px; 
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.primary-button:hover {
+    background-color: #138496;
+    box-shadow: 0 6px 15px rgba(23, 162, 184, 0.4); 
+}
+
+/* UPDATED: Container for the image (removed placeholder colors/text styles) */
+.hero-image {
+    flex-basis: 450px; 
+    height: 350px;
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    /* Essential to contain the image */
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* NEW: Style for the actual image inside the hero box */
+.hero-image .visual-img {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    /* Ensures the image covers the entire container without distortion */
+    object-fit: cover; 
+    border-radius: 15px; /* Matches container rounding */
+}
+
+/* --- Features Section --- */
+.features-section {
+    padding: 80px 30px; 
+    text-align: center;
+    background-color: #fff; 
+}
+
+.features-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    color: var(--color-text);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+}
+
+.feature-item {
+    background-color: var(--color-light);
+    padding: 30px; 
+    border-radius: 12px;
+    border: 1px solid #e9ecef; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+/* Attractive Hover Effect for the 'Boxes' */
+.feature-item:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+    background-color: #fff;
+}
+
+.feature-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.feature-item p {
+    color: #6c757d;
+}
+
+/* --- Footer Styling --- */
+.main-footer {
+    text-align: center;
+    padding: 40px 30px; 
+    background-color: var(--color-text); 
+    color: white;
+}
+
+.main-footer .social-links a {
+    color: var(--color-secondary);
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.main-footer .social-links a:hover {
+    color: #fff;
+}
